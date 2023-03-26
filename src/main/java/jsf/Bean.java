@@ -39,4 +39,12 @@ public class Bean {
     public String afficher() {
         return "affichage_3?nb=" + nombre + "&amp;faces-redirect=true";
     }
+    
+    public String actionString(String base, String numEx, String query){
+        String page = base+"__"+numEx+"?nb=" + nombre + query;
+        if(numEx.equals("1")){
+            page = base+"__"+numEx;
+        }
+        return page;
+    }
 }
